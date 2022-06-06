@@ -1,8 +1,25 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import dynamic from "next/dynamic";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+// function SafeHydrate({ children }: { children: JSX.Element }) {
+//   return (
+//     <div suppressHydrationWarning>
+//       {typeof window === "undefined" ? null : children}
+//     </div>
+//   );
+// }
 
-export default MyApp
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    // <SafeHydrate>
+    <Component {...pageProps} />
+    // </SafeHydrate>
+  );
+};
+
+export default dynamic(() => Promise.resolve(App), {
+  ssr: false,
+});
+
+// export default App;
