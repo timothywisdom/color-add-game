@@ -42,7 +42,11 @@ const ColorAddScene = () => {
     colorVariant2,
     colorVariantArray,
   } = useMemo(() => {
-    const colorScale = getChromaColorScale(color1, undefined, 75);
+    const colorScale = getChromaColorScale(
+      color1,
+      undefined,
+      getRandomInt(20, 75)
+    );
     const color2 = colorScale(100);
     const mixedColor = colorScale(50);
 
