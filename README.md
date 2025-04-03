@@ -29,4 +29,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-Deployed to https://color-add-game.vercel.app(https://color-add-game.vercel.app/)
+Deployed to [Vercel](https://color-add-game.vercel.app/)
